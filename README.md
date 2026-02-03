@@ -2,7 +2,9 @@
 
 A collection of anti-patterns in leadership, styled like [nohello.net](https://nohello.net/en/). Each "smell" is a dedicated page explaining a toxic leadership behavior, why it's harmful (backed by real research), and what to do instead.
 
-**Live site:** [leadersmells.com](https://leadersmells.com) *(deploy pending)*
+**Repository:** [github.com/marlonbarreto-git/leader-smells](https://github.com/marlonbarreto-git/leader-smells)
+
+![Leader Smells Screenshot](/public/screenshot.png)
 
 ## Leader Smells
 
