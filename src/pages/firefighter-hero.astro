@@ -1,0 +1,161 @@
+---
+import SmellLayout from '@/layouts/SmellLayout.astro';
+---
+
+<SmellLayout
+  title="The Firefighter Hero"
+  emoji="🚒"
+  tagline="Creates or allows crises to solve them heroically"
+  description="The Firefighter Hero thrives on chaos. They create or allow crises to emerge so they can swoop in and save the day, getting recognition while the team burns out."
+>
+  <h2 class="section-title">The Pattern</h2>
+
+  <p>
+    The Firefighter Hero is addicted to crisis. They allow known problems to
+    fester until they become emergencies, then step in at the last moment to
+    "save the day." They're celebrated for their heroic problem-solving while
+    the team lives in constant emergency mode.
+  </p>
+
+  <p>
+    Prevention work is invisible and unrewarded. Building monitoring? That
+    doesn't get promotions. Writing documentation? Nobody notices. But pulling
+    an all-nighter to fix a production outage? That's visible. That gets
+    recognition. That makes you the hero.
+  </p>
+
+  <p>
+    Sometimes the pattern is unconscious — the manager genuinely thrives on
+    adrenaline and doesn't see the harm. Sometimes it's more deliberate —
+    they've learned that firefighting is how you prove value. Either way,
+    the team suffers while the hero shines.
+  </p>
+
+  <h2 class="section-title">Why It Hurts</h2>
+
+  <div class="study-ref">
+    <strong>Psychological safety</strong> is the #1 factor in high-performing
+    teams (Google research). Blame-focused environments cause delayed incident
+    reporting, hidden information, and prolonged outages.
+  </div>
+
+  <div class="study-ref">
+    <strong>Blameless postmortem culture</strong> enables learning, produces
+    honest reporting, and focuses on systemic improvement. Organizations
+    adopting it see improved MTTR and reduced incident frequency.
+  </div>
+
+  <div class="study-ref">
+    <strong>Amy Edmondson's research</strong> shows teams with psychological
+    safety openly acknowledge errors and discuss prevention. Teams without it
+    hide mistakes, ensuring they repeat.
+  </div>
+
+  <p>
+    The perverse incentive problem is real. Organizations often reward
+    firefighting more than fire prevention. The "availability heuristic" makes
+    dramatic rescues more memorable than quiet maintenance. Heroes who save the
+    day get promoted; engineers who prevent problems are invisible.
+  </p>
+
+  <p>
+    This creates dependency and fragility. Only the hero can fix things. Only
+    the hero knows the system. The team never develops capability because
+    they're never given the chance to solve problems themselves. And the same
+    types of crises keep recurring because nobody invests in prevention.
+  </p>
+
+  <p>
+    The stress on the team is enormous. Constant emergencies lead to burnout.
+    The emotional rollercoaster of crisis → rescue → brief calm → crisis is
+    exhausting. Good people leave, making the remaining team even more
+    dependent on the hero.
+  </p>
+
+  <h2 class="section-title">The Fix</h2>
+
+  <ul class="fix-list">
+    <li>
+      <strong>Reward prevention</strong> — Celebrate avoided incidents, not
+      just resolved ones. Make invisible work visible.
+    </li>
+    <li>
+      <strong>Practice blameless postmortems</strong> — Focus on systems, not
+      individuals. Ask "what failed?" not "who failed?"
+    </li>
+    <li>
+      <strong>Track recurring issues</strong> — If it happened twice, invest
+      in preventing a third time. Pattern recognition is key.
+    </li>
+    <li>
+      <strong>Invest in resilience</strong> — Automation, monitoring,
+      redundancy. Prevention infrastructure is cheaper than repeated crises.
+    </li>
+    <li>
+      <strong>Spread knowledge</strong> — No one person should be the only one
+      who can fix things. Document, cross-train, rotate.
+    </li>
+    <li>
+      <strong>Measure Mean Time Between Failures</strong> — Not just Mean Time
+      To Recovery. Track how often things break, not just how fast you fix them.
+    </li>
+    <li>
+      <strong>Question hero patterns</strong> — If the same person always saves
+      the day, ask why. What's preventing others from stepping up?
+    </li>
+  </ul>
+
+  <h2 class="section-title">If You're Affected</h2>
+
+  <ul class="affected-list">
+    <li>
+      <strong>Document recurring issues</strong> — Build the evidence that
+      prevention is needed. Data makes patterns undeniable.
+    </li>
+    <li>
+      <strong>Propose systemic fixes</strong> — After each incident, recommend
+      prevention measures. Put them in writing.
+    </li>
+    <li>
+      <strong>Avoid hero dependency</strong> — Cross-train so you're not the
+      only one who can fix things. Spread knowledge deliberately.
+    </li>
+    <li>
+      <strong>Advocate for blameless culture</strong> — Share research on
+      psychological safety. Make the case for learning over blame.
+    </li>
+    <li>
+      <strong>Track the pattern</strong> — Note when crises are "allowed" to
+      develop. Are they really unavoidable?
+    </li>
+    <li>
+      <strong>Protect yourself</strong> — Don't burn out being the only
+      firefighter. Set limits on after-hours availability.
+    </li>
+  </ul>
+
+  <h2 class="section-title">References</h2>
+
+  <ul>
+    <li>
+      <a href="https://journals.sagepub.com/doi/10.2307/2666999" target="_blank" rel="noopener">
+        Psychological Safety and Learning Behavior in Work Teams
+      </a> — Amy Edmondson
+    </li>
+    <li>
+      <a href="https://incident.io/blog/psychological-safety-in-incident-management" target="_blank" rel="noopener">
+        The Importance of Psychological Safety in Incident Management
+      </a> — incident.io
+    </li>
+    <li>
+      <a href="https://devops.com/from-incidents-to-insights-the-power-of-blameless-postmortems/" target="_blank" rel="noopener">
+        From Incidents to Insights: The Power of Blameless Postmortems
+      </a> — DevOps.com
+    </li>
+    <li>
+      <a href="https://sre.google/sre-book/postmortem-culture/" target="_blank" rel="noopener">
+        Postmortem Culture: Learning from Failure
+      </a> — Google SRE Book
+    </li>
+  </ul>
+</SmellLayout>

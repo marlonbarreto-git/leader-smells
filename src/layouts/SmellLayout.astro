@@ -1,0 +1,35 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  emoji: string;
+  tagline: string;
+  description: string;
+}
+
+const { title, emoji, tagline, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <article>
+    <header style="margin-bottom: 2rem;">
+      <span style="font-size: 4rem; line-height: 1;">{emoji}</span>
+      <h1 style="margin-top: 0.5rem;">{title}</h1>
+      <p
+        style="font-size: 1.25rem; color: var(--color-text-secondary); margin-bottom: 0;"
+      >
+        {tagline}
+      </p>
+    </header>
+
+    <slot />
+
+    <hr style="margin-top: 3rem;" />
+
+    <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+      <a href="/">&larr; All Leader Smells</a>
+      <a href="/resources">Resources &rarr;</a>
+    </nav>
+  </article>
+</BaseLayout>

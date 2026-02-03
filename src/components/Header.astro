@@ -1,0 +1,60 @@
+---
+const pathname = Astro.url.pathname;
+---
+
+<header
+  style="border-bottom: 1px solid var(--color-border); background-color: var(--color-bg);"
+>
+  <nav class="container" style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; padding-bottom: 1rem;">
+    <a
+      href="/"
+      style="text-decoration: none; color: var(--color-text); font-weight: 700; font-size: 1.125rem;"
+    >
+      <span style="color: var(--color-accent);">//</span> leader smells
+    </a>
+
+    <div style="display: flex; align-items: center; gap: 1.5rem;">
+      <a
+        href="/about"
+        style={`text-decoration: none; color: ${pathname === '/about' ? 'var(--color-accent)' : 'var(--color-text-secondary)'};`}
+      >
+        About
+      </a>
+      <a
+        href="/resources"
+        style={`text-decoration: none; color: ${pathname === '/resources' ? 'var(--color-accent)' : 'var(--color-text-secondary)'};`}
+      >
+        Resources
+      </a>
+      <button
+        id="theme-toggle"
+        aria-label="Toggle dark mode"
+        style="background: none; border: none; cursor: pointer; padding: 0.25rem; color: var(--color-text-secondary); font-size: 1.25rem;"
+      >
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon" style="display: none;">🌙</span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const sunIcon = toggle?.querySelector('.sun-icon') as HTMLElement;
+  const moonIcon = toggle?.querySelector('.moon-icon') as HTMLElement;
+
+  function updateIcons(isDark: boolean) {
+    if (sunIcon && moonIcon) {
+      sunIcon.style.display = isDark ? 'none' : 'inline';
+      moonIcon.style.display = isDark ? 'inline' : 'none';
+    }
+  }
+
+  updateIcons(document.documentElement.classList.contains('dark'));
+
+  toggle?.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    updateIcons(isDark);
+  });
+</script>

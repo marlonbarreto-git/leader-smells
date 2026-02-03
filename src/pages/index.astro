@@ -1,0 +1,96 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SmellCard from '@/components/SmellCard.astro';
+
+const smells = [
+  {
+    href: '/update-addict',
+    emoji: '🔔',
+    title: 'The Update Addict',
+    tagline: 'Leaders who ask "any updates?" instead of checking existing documentation',
+  },
+  {
+    href: '/sync-maximalist',
+    emoji: '📅',
+    title: 'The Sync Maximalist',
+    tagline: 'Everything must be a meeting, async communication is forbidden',
+  },
+  {
+    href: '/micromanager',
+    emoji: '🔬',
+    title: 'The Micromanager',
+    tagline: 'Cannot delegate, needs to approve everything, grants no autonomy',
+  },
+  {
+    href: '/priority-spinner',
+    emoji: '🎰',
+    title: 'The Priority Spinner',
+    tagline: 'Changes priorities constantly, everything is always urgent',
+  },
+  {
+    href: '/talent-squeezer',
+    emoji: '🍋',
+    title: 'The Talent Squeezer',
+    tagline: 'Extracts maximum output without investing in growth',
+  },
+  {
+    href: '/firefighter-hero',
+    emoji: '🚒',
+    title: 'The Firefighter Hero',
+    tagline: 'Creates or allows crises to solve them heroically',
+  },
+  {
+    href: '/invisible-goalpost',
+    emoji: '👻',
+    title: 'The Invisible Goalpost',
+    tagline: 'Unclear expectations, moving targets, "that\'s not what I meant"',
+  },
+  {
+    href: '/calendar-tetris',
+    emoji: '🧩',
+    title: 'The Calendar Tetris Master',
+    tagline: 'Fills every time slot, no focus time, back-to-back meetings forever',
+  },
+];
+---
+
+<BaseLayout
+  title="Leader Smells"
+  description="A collection of anti-patterns in leadership. Recognize toxic behaviors, understand why they're harmful, and learn what good leaders do instead."
+>
+  <header style="text-align: center; margin-bottom: 3rem;">
+    <h1 style="margin-bottom: 0.5rem;">Leader Smells</h1>
+    <p style="font-size: 1.25rem; color: var(--color-text-secondary); max-width: 32rem; margin: 0 auto;">
+      Anti-patterns in leadership that hurt teams. Backed by research.
+    </p>
+  </header>
+
+  <section>
+    <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">
+      In code, a "smell" signals something might be wrong. The same applies to leadership.
+      These patterns might seem harmless, but research shows they destroy productivity,
+      morale, and retention. Recognize them. Name them. Fix them.
+    </p>
+
+    <div>
+      {smells.map((smell) => (
+        <SmellCard
+          href={smell.href}
+          emoji={smell.emoji}
+          title={smell.title}
+          tagline={smell.tagline}
+        />
+      ))}
+    </div>
+  </section>
+
+  <hr />
+
+  <section style="text-align: center;">
+    <p style="color: var(--color-text-secondary);">
+      Every claim is backed by real research.
+      <a href="/resources">Explore the sources</a> or
+      <a href="/contribute">suggest a new smell</a>.
+    </p>
+  </section>
+</BaseLayout>
